@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>欢迎来到大图书馆</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Noto Serif SC", "Source Han Serif SC", "STSong", "SimSun", "Songti SC", Georgia, "Times New Roman", serif;
+            background: #f5f0e8;
+            color: #3e2f1c;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .background-pattern {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.04;
+            background-image:
+                repeating-linear-gradient(0deg, transparent, transparent 40px, #3e2f1c 40px, #3e2f1c 41px),
+                repeating-linear-gradient(90deg, transparent, transparent 40px, #3e2f1c 40px, #3e2f1c 41px);
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .library-icon {
+            font-size: 5rem;
+            margin-bottom: 1rem;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            margin-bottom: 1rem;
+            color: #2c1810;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #6b5a4b;
+            margin-bottom: 2rem;
+            letter-spacing: 0.1em;
+        }
+
+        .divider {
+            width: 120px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #8b7355, transparent);
+            margin: 0 auto 2rem;
+        }
+
+        .quote {
+            font-style: italic;
+            color: #8b7355;
+            font-size: 1rem;
+            line-height: 1.8;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .bookshelf {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .book {
+            width: 30px;
+            height: 120px;
+            border-radius: 2px 4px 4px 2px;
+            transition: transform 0.3s ease;
+            cursor: default;
+        }
+
+        .book:hover {
+            transform: translateY(-8px);
+        }
+
+        .book:nth-child(1)  { background: #8b4513; height: 110px; }
+        .book:nth-child(2)  { background: #a0522d; height: 125px; }
+        .book:nth-child(3)  { background: #6b3410; height: 100px; }
+        .book:nth-child(4)  { background: #2f4f4f; height: 130px; }
+        .book:nth-child(5)  { background: #654321; height: 115px; }
+        .book:nth-child(6)  { background: #800020; height: 120px; }
+        .book:nth-child(7)  { background: #4a3728; height: 108px; }
+        .book:nth-child(8)  { background: #3b5323; height: 128px; }
+        .book:nth-child(9)  { background: #5c4033; height: 112px; }
+        .book:nth-child(10) { background: #1a3a3a; height: 122px; }
+        .book:nth-child(11) { background: #7b3f00; height: 105px; }
+        .book:nth-child(12) { background: #4d2e1b; height: 118px; }
+        .book:nth-child(13) { background: #2e4057; height: 126px; }
+        .book:nth-child(14) { background: #6b3a2a; height: 114px; }
+
+        footer {
+            position: fixed;
+            bottom: 1rem;
+            z-index: 1;
+            font-size: 0.85rem;
+            color: #b0a090;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            .library-icon {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-pattern"></div>
+
+    <div class="container">
+        <div class="library-icon">📚</div>
+        <h1>欢迎来到大图书馆</h1>
+        <div class="subtitle">— 知识的殿堂 · 思想的港湾 —</div>
+        <div class="divider"></div>
+        <p class="quote">
+            "书中自有黄金屋，书中自有颜如玉。<br>
+            每一本书都是一扇通往未知世界的门。"
+        </p>
+        <div class="bookshelf">
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 大图书馆 · Great Library
+    </footer>
+</body>
+</html>
